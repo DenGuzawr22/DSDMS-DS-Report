@@ -1,0 +1,49 @@
+ContextMap {
+  type = SYSTEM_LANDSCAPE
+  state = AS_IS
+  
+  contains DossierContext
+  contains DrivingContext
+  contains ExamContext
+  contains DoctorContext
+  
+  DrivingContext [D]<-[U] ExamContext 
+  DossierContext [P]<->[P] ExamContext
+  ExamContext [P] <-> [P] DoctorContext
+  DoctorContext [D] <- [U] DossierContext
+}
+
+
+BoundedContext AbstractContext{
+  implementationTechnology = "Kotlin, Vertx, Kmongo"
+  type = SYSTEM
+}
+
+
+BoundedContext DossierContext refines AbstractContext{
+  domainVisionStatement = "Gestione di tutte le informazione riguardanti un iscritto, gestisce invalidità delle pratiche"
+  
+  businessModel = "COMPLIANCE"
+  evolution = COMMODITY
+}
+
+BoundedContext DrivingContext refines AbstractContext{
+  domainVisionStatement = "Consente la gestione degli slot di guida, acquisendo l’informazione relative a veicoli, istruttori e utilizzando l’informazione del foglio rosa relativo ad una pratica"
+  businessModel = "REVENUE"
+  evolution = COMMODITY
+}
+
+BoundedContext ExamContext refines AbstractContext{
+  domainVisionStatement = "Consente la gestione di esame teorico e pratico, insieme a tutto ciò che ne concerne (registro d’esame teorico e foglio rosa)"
+  
+  businessModel = "COMPLIANCE"
+  evolution = CUSTOM_BUILT
+}
+
+
+BoundedContext DoctorContext refines AbstractContext{
+  domainVisionStatement = "consente la gestione di tutto ciò che concerne la visita, necessaria agli iscritti per poter coneguire l’esame teorico"
+  
+  businessModel = "COMPLIANCE"
+  evolution = CUSTOM_BUILT
+}

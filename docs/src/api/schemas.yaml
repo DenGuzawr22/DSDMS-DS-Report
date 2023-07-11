@@ -1,0 +1,176 @@
+SubscriberDocuments:
+  type: object
+  required: [name, surname, birthdate, fiscal_code]
+  properties:
+    name:
+      type: string
+      example: "Homer"
+    surname:
+      type: string
+      example: "Simpsons"
+    birthdate:
+      type: string
+      format: date
+      example: "1990-03-03"
+    fiscal_code:
+      type: string
+      example: "SMPHMR80A01C573O"
+Dossier:
+  allOf:
+    - $ref: './schemas.yaml#/SubscriberDocuments'
+    - type: object
+      required: [_id, validity, examAttempts]
+      properties:
+        _id:
+          type: string
+          example: "64633c11f85fe95eb801c0b6"
+        validity:
+          type: boolean
+        examsStatus:
+          $ref: './schemas.yaml#/ExamsStatus'
+ExamsStatus:
+  type: object
+  required: [theoreticalExamState,practicalExamState]
+  properties:
+    theoreticalExamState:
+      type: string
+      enum: [TO_DO, PASSED]
+    practicalExamState:
+      type: string
+      enum: [TO_DO, FIRST_PROVISIONAL_LICENCE_INVALID, SECOND_PROVISIONAL_LICENCE_INVALID, PASSED]
+ExamEvent:
+  type: string
+  enum: [THEORETICAL_EXAM_PASSED, PROVISIONAL_LICENSE_INVALIDATION, PRACTICAL_EXAM_PASSED]
+
+DoctorSlot:
+  type: object
+  required: [date, time, dossierId]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+      enum: [TUESDAY, FRIDAY]
+    time:
+      type: string
+      example: "9:30"
+      description: "Must be between 18:00 and 19:30"
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+GetBookedDoctorSlots:
+  type: object
+  required: [date]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+DoctorResult:
+  type: object
+  required: [dossierId, date, result]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+    result:
+      type: string
+      enum: [VALID, NEED_ONE_MORE_VISIT, NOT_VALID]
+DrivingSlot:
+  type: object
+  required: [date, time, instructorId, dossierId, licensePlate, slotType]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+    time:
+      type: string
+      example: "9:30"
+    instructorId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+    licensePlate:
+      $ref: './schemas.yaml#/licensePlate'
+    slotType:
+      type: string
+      enum: [ORDINARY, EXAM]
+PracticalExamDay:
+  type: object
+  required: [date]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+licensePlate:
+  type: object
+  required: [numberPlate]
+  properties:
+    numberPlate:
+      type: string
+      example: "FZ340AR"
+ExamPassData:
+  type: object
+  required: [dossierId, date]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+TheoreticalExamPass:
+  type: object
+  required: [dossierId, releaseDate, expiryDate]
+  properties:
+    releaseDate:
+      type: string
+      example: "2023-10-12"
+    expiryDate:
+      type: string
+      example: "2023-10-12"
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+TheoreticalExamAppeal:
+  type: object
+  required: [date, numberOfPlaces]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+    numberOfPlaces:
+      type: number
+      example: "10"
+TheoreticalExamAppealUpdate:
+  type: object
+  required: [date, dossierId]
+  properties:
+    date:
+      type: string
+      example: "2023-10-12"
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+ProvisionalLicense:
+  type: object
+  required: [dossierId, startValidity]
+  properties:
+    dossierId:
+      type: string
+      example: "64633c11f85fe95eb801c0b6"
+    startValidity:
+      type: string
+      example: "2023-10-12"
+ProvisionalLicenseHolder:
+  type: object
+  required: [ practicalExamAttempts, provisionalLicense]
+  properties:
+    practicalExamAttempts:
+      type: number
+    provisionalLicense:
+      $ref: './schemas.yaml#/ProvisionalLicense'
+
