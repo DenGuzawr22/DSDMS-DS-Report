@@ -1,10 +1,10 @@
 ---
-title: Strumenti utilizzati
+title: Dettagli Implementativi
 has_children: false
 nav_order: 6
 ---
 
-# Strumenti utilizzati
+# Dettagli implementativi
 
 In questa sezione inseriamo le tecnologie che sono state utilizzate all'interno del progetto. Data la natura e architettura similare dei microservizi, non sono presenti tecnologie specifiche per ciascun microservizio.
 
