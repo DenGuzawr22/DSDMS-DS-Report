@@ -1,6 +1,6 @@
 ---
 title: Casi d'uso
-parent: Analisi del dominio
+parent: Analisi dei Requisiti
 has_children: false
 nav_order: 4
 ---

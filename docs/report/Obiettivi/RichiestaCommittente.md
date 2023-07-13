@@ -1,6 +1,6 @@
 ---
 title: Richiesta committente
-parent: Analisi del dominio
+parent: Obiettivi
 has_children: false
 nav_order: 1
 ---

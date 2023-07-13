@@ -1,6 +1,6 @@
 ---
 title: Ubiquitous Language
-parent: Analisi del dominio
+parent: Analisi dei Requisiti
 has_children: false
 nav_order: 3
 ---

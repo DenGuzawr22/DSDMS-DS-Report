@@ -1,6 +1,6 @@
 ---
 title: Knowledge crunching
-parent: Analisi del dominio
+parent: Obiettivi
 has_children: false
 nav_order: 2
 ---
