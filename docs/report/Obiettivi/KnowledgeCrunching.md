@@ -2,7 +2,7 @@
 title: Knowledge crunching
 parent: Obiettivi
 has_children: false
-nav_order: 2
+nav_order: 1
 ---
 
 
