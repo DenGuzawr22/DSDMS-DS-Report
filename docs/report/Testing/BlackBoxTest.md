@@ -1,31 +1,9 @@
 ---
-title: Testing
+title: BlackBox Test
 has_children: false
+parent: Testing
 nav_order: 7
 ---
-
-# Testing
-
-Per verificare il corretto funzionamento del sistema e l'efficienza dei servizi forniti al cliente,
-si è proceduto a testare le diverse componenti del sistema, mediante Acceptance Testing Driven Development.
-Il testing avviene su due fronti:
-- test locali, all'interno di ciascun microservice;
-- black-box test (a scatola chiusa), che rappresentano una porzione per la verifica del progetto.
-  
-Nelle successive sezioni verranno descritti in maggiore dettaglio i test realizzati e le motivazioni che vanno a supportare le scelte implementative effettuate.
-
-Non verranno invece riportate, verifiche sul coverage del progetto fornito, in quanto solo una piccola porzione del codice dei microservice viene testata mediante test locali. Un client "dummy", viene utilizzato per eseguire acceptance test "a scatola chiusa", forniti al committente, verificando il soddisfacimento dei requisiti funzionali e non funzionali imposti.
-
-## Test locali
-Per verificare determinate logiche o comportamenti del sistema, parte integrante del dominio affrontato, sono stati sviluppati
-ove necessario alcuni test locali.
-Il framework di test utilizzato è JUnit, che ha consentito lo sviluppo rapido e chiaro delle logiche
-e delle procedure in esame.
-
-Di seguito alcuni esempi di questa metodologia di testing.
-
-All'interno di ExamService, nel rispettivo modulo di test, si è andati a verificare il corretto funzionamento
-di serializzazione e deserializzazione dei dati e inoltre si è verificata che l'implementazione eseguita, soddisfi le logiche e i rispettivi constraints sul dominio affrontato.
 
 ## Black-Box Test
 Come anticipato, questa tipologia di test nasce dalla necessità di verificare le API messe a disposizione dai singoli microservice

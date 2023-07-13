@@ -6,8 +6,6 @@ nav_order: 1
 
 # Driving School Distributed Management Software (DSDMS)
 
-Questo è il progetto per i corsi: Sistemi Distribuiti e Laboratorio dei Sistemi Software. 
-
 L'obiettivo di questo progetto è creare un nuovo software, utile per le Scuole di Guida, e tutti gli aspetti di questo settore. 
 In particolare:
 - Gestire le Lezioni Pratiche di Guida;
@@ -31,9 +29,14 @@ Il Domain Driven Design è la metodologia che è stata seguita per sviluppare il
   - [Doctor Service](report/TacticalDesign/DoctorService.md)
   - [Driving Service](report/TacticalDesign/DrivingService.md)
   - [Exam Service](report/TacticalDesign/ExamService.md)
-- [Strumenti Utilizzati](report/StrumentiUtilizzati.md)
-- [Testing](report/Testing.md)
-- [Documentazione DevOps](report/DevOpsDocumentation.md)
+- [Dettagli Implementativi](report/DettagliImplementativi.md)
+- [Testing](report/Testing/Testing.md)
+  - [Test Locali](report/Testing/LocalTest.md)
+  - [Test Black-Box](report/Testing/BlackBoxTest.md)
+- [Deployment](report/Deployment/Deployment.md)
+  - [Continuous Integration](report/Deployment/ContinuousIntegration.md)
+  - [Quality Assurance](report/Deployment/QualityAssurance.md)
+- [Esempi di utilizzo](report/UsageExamples.md)
 - [Conclusioni](report/Conclusioni/Conclusioni.md)
   - [Retrospettiva](report/Conclusioni/Retrospettiva.md)
   - [Sviluppi Futuri](report/Conclusioni/SviluppiFuturi.md)
