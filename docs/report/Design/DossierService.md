@@ -1,8 +1,8 @@
 ---
 title: Dossier Service 
 has_children: false
-parent: Tactical Design
-nav_order: 1
+parent: Design
+nav_order: 2
 ---
 
 # DossierService tactical design

@@ -30,7 +30,7 @@ val options: WebClientOptions = WebClientOptions()
 return WebClient.create(Vertx.vertx(), options)
 ```
 
-Avendo eseguito la connessione, possiamo procedere con l'utilizzo delle API messe a disposizione dal microservizio voluto, visualizzabili mediante documentazione OpenAPI, al seguente link: https://app.swaggerhub.com/apis/DenGuzawr22/DSDMS/latest.
+Avendo eseguito la connessione, possiamo procedere con l'utilizzo delle API messe a disposizione dal microservizio voluto, visualizzabili mediante [Documentazione OpenAPI](https://app.swaggerhub.com/apis/DenGuzawr22/DSDMS/latest) .
 
 L'obiettivo dell'esempio riportato è quello di registrare una guida pratica su strada, svolto come mostrato.
 

@@ -1,8 +1,8 @@
 ---
 title: Casi d'uso
-parent: Analisi dei Requisiti
+parent: Requisiti
 has_children: false
-nav_order: 4
+nav_order: 1
 ---
 
 # Casi d'uso

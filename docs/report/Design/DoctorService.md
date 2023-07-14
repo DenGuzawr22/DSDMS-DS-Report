@@ -1,8 +1,8 @@
 ---
 title: Doctor Service 
 has_children: false
-parent: Tactical Design
-nav_order: 2
+parent: Design
+nav_order: 3
 ---
 
 

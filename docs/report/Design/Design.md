@@ -1,9 +1,30 @@
 ---
-title: Tactical Design
+title: Design
 has_children: true
-nav_order: 5
+nav_order: 4
 ---
-# Tactical design
+# Design
+## Architettura generale
+Tenendo conto del requisito di implementazione che richiede di basare l'architettura del sistema su microservizi, sono stati definiti i seguenti elementi principali dell'architettura:
+- Il client si connette a uno o più microservizi attraverso le API REST.;
+- Alcuni microservizi comunicano tra loro tramite le API REST;
+- Ogni microservizio dispone del proprio database.
+
+
+![Alt text](<img/componentsDiagram.png>)
+
+<p align="center">[Fig 1] Diagramma del deployment che mostra una astrazione di architettura del sistema</p>
+
+Durante la fase di Strategical Design, sono stati definiti 4 bounded context che verranno mappati su 4 microservizi: DoctorService, DossierService, ExamService e DrivingService. È stato deciso che ognuno di essi avrà il proprio database MongoDB
+
+Il componente di testing chiamato SystemTester è responsabile di simulare un client al fine di verificare il corretto funzionamento del sistema. Le comunicazioni tra i microservizi sono rappresentate nella  <a href="#deploymentImpl">[Fig 2]</a>
+
+<div id="deploymentImpl"></div>
+
+![Alt text](<img/componentsDiagramImpl.png>)
+<p align="center">[Fig 2] Diagramma del deployment dell'intero sistema</p>
+
+## Tactical design
 L'architettura dei microservizi è stata progettata seguendo i principi di *[Clean Architecture](https://betterprogramming.pub/the-clean-architecture-beginners-guide-e4b7058c1165)* che permettono lo sviluppo di applicazioni Loosely-Coupled ovvero con forte disaccoppiamento dell’applicazione dall’infrastruttura.
 
 In particolare sono stati individuati quattro layer: 
@@ -16,13 +37,13 @@ In particolare sono stati individuati quattro layer:
 
 
 ![Clean architecture diagram](img/cleanArchitecture.png)
-<p align="center">[Fig 1] Clean Architecture nel contesto dei microservizi realizzati </p>
+<p align="center">[Fig 3] Clean Architecture nel contesto dei microservizi realizzati </p>
 
 Per la realizzazione dei microservizi, sono state seguite le linee guida del [tactical design](https://thedomaindrivendesign.io/what-is-tactical-design/), cercando quindi d'individuare tra i concetti del dominio quali avessero il ruolo di entità, evento, value objects o domain service.
 
 ## Design dei microservizi
 
-Il diagramma in figura <a href="#class_architecture">[Fig 2]</a> descrive le relazioni tra diverse componenti dell'architettura:
+Il diagramma in figura <a href="#class_architecture">[Fig 4]</a> descrive le relazioni tra diverse componenti dell'architettura:
 
 - ***Server***: responsabile per l'interazione con i client o altri sistemi esterni. Il server riceve le richieste in arrivo, tramite le API REST, e le inoltra al gestore delle rotte (*RouteHandlers*);
 
@@ -32,7 +53,7 @@ Il diagramma in figura <a href="#class_architecture">[Fig 2]</a> descrive le rel
 
 - ***DomainService***: ogni servizio del dominio rappresentano una parte della logica del business del bounded context. Inoltre, i servizi del dominio possono dipendere da:
   - ***Repository***: questa componente rappresenta un'astrazione per l'accesso ai dati persistenti.
-  - ***ChannelsProvider***: questa componente consente l'ottenimento dei canali di comunicazione con altri microservizi. (Vedi: <a href="#class_channels">[Fig 3]</a>)
+  - ***ChannelsProvider***: questa componente consente l'ottenimento dei canali di comunicazione con altri microservizi. (Vedi: <a href="#class_channels">[Fig 5]</a>)
   
 <div id="class_architecture"></div>
 
@@ -48,12 +69,12 @@ DomainServiceA --> ChannelsProvider
 DomainServiceB --> Repository
 
 ```
-<p align="center">[Fig 2] Struttura generale dei microservizi. </p>
+<p align="center">[Fig 4] Struttura generale dei microservizi. </p>
 
 ### ChannelsProvider e tipi di risposte
 ***ChannelsProvider*** è una factory che produce e fornisce l'accesso agli adattatori di output, che permettono la comunicazione con gli altri microservizi. Ogni Channel è rappresentato da una interfaccia che fornisce i metodi coerenti con il modello di business, astraendo dall'aspetto tecnologico necessario per la comunicazione. 
 
-Esempio dell'utilizzo: <a href="#class_channels">[Fig 3]</a>. Si può notare che i metodi dei canali restituiscono un'enumerazione *DomainResponseStatus* che permette da un lato la comprensione delle risposte provenienti da un altro dominio (es. DOSSIER_INVALID, VALID_DOSSIER_ALREADY_EXISTS ecc.), dall'altro la trasformazione dei problemi tecnologici (es. Errori di comunicazione) in un formato comprensibile dal dominio (es. DELETE_ERROR, UPDATE_ERROR).
+Esempio dell'utilizzo: <a href="#class_channels">[Fig 5]</a>. Si può notare che i metodi dei canali restituiscono un'enumerazione *DomainResponseStatus* che permette da un lato la comprensione delle risposte provenienti da un altro dominio (es. DOSSIER_INVALID, VALID_DOSSIER_ALREADY_EXISTS ecc.), dall'altro la trasformazione dei problemi tecnologici (es. Errori di comunicazione) in un formato comprensibile dal dominio (es. DELETE_ERROR, UPDATE_ERROR).
 
 Stesso approccio viene utilizzato anche per la *Repository* che tipicamente restituisce *RepositoryResponseStatus*, successivamente convertito in *DomainResponseStatus* tramite una mappa di conversione.
 *RouteHandler* a sua volta ha una tabella per convertire le risposte del domino nei codici HTTP.
@@ -87,7 +108,7 @@ ChannelsProvider --> DossierServiceChannel
 ChannelsProvider --> ExamServiceChannel
 
 ```
-<p align="center">[Fig 3] Esempio di comunicazione tra microservizi. In particolare sono mostrati i canali di comunicazione disponibili per DoctorService. </p>
+<p align="center">[Fig 5] Esempio di comunicazione tra microservizi. In particolare sono mostrati i canali di comunicazione disponibili per DoctorService. </p>
 
 
 ## Organizzazione degli artefatti
@@ -98,16 +119,6 @@ I microservizi sono composti da quattro package principali:
 - *model* contiene gli artefatti del modello del dominio.
 
 ![Alt text](<img/packageDiagram.png>)
-<p align="center">[Fig 4] Diagramma dei package comune per tutti microservizi</p>
+<p align="center">[Fig 6] Diagramma dei package comune per tutti microservizi</p>
 
 
-## Architettura generale
-Seguendo l'architettura generale:
-- il client comunica con uno o più microservizi tramite le API REST;
-- Alcuni microservizi comunicano con altri microservizi tramite le API REST;
-- Ogni microservizio, condivide un unico database, ma su schemi e tabelle separati e indipendenti tra loro.
-
-
-![Alt text](<img/componentsDiagram.png>)
-
-<p align="center">[Fig 5] Diagramma del deployment che visualizza un esempio dell'architettura generale dei nodi del sistema</p>

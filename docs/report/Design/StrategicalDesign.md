@@ -1,7 +1,8 @@
 ---
 title: Strategical Design
 has_children: false
-nav_order: 4
+parent: Design
+nav_order: 1
 ---
 
 # Strategical Design

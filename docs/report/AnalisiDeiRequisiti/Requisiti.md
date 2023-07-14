@@ -1,15 +1,13 @@
 ---
 title: Requisiti
-has_children: false
+has_children: true
 nav_order: 3
 ---
 
-
 # Requisiti
+Questa sezione della relazione, viene dedicata alla descrizione approfondita dei requisiti di progetto, raccolti durante le fasi di Knowledge Crunching.
 
-Questa sezione della relazione, viene dedicata alla descrizione approfondita dei requisiti di progetto, raccolti durante le fasi di analisi del dominio e perfezionati durante le fasi di Knowledge Crunching.
-
-Questo ha permesso di determinare nel dettaglio, le funzionalità necessarie e volute all'interno del progetto, evitando ambiguità nella discussione con il cliente, appoggiandosi sull'Ubiquitous Language precedentemente discusso.
+Questo ha permesso di determinare nel dettaglio, le funzionalità necessarie e volute all'interno del progetto, evitando ambiguità nella discussione con il cliente, appoggiandosi sull'Ubiquitous Language.
 
 ## Requisiti di Business
 I requisiti di business specificano le caratteristiche che il sistema dovrà possedere per essere corretto, definendone gli obiettivi di alto livello.
@@ -43,7 +41,7 @@ Sono stati identificati i requisiti funzionali e sono stati suddivisi in tre cat
 - dopo la seconda scadenza del Provisional License (limitatamente a un singolo Dossier), il dossier deve essere invalidato;
 - un dossier invalidato non deve essere utilizzabile su alcun processo effettuato dall'utente, ma viene mantenuto col solo scopo di condurre analisi future;
 - un subscriber può avere più dossier a lui collegati, ma solamente uno valido in un dato momento;
-- deve essere possibile aggiornare Theoretical Exam e Practical Exam Status;
+- deve essere possibile aggiornare Theoretical Exam e Practical Exam Status.
 
 Optional: un dossier può essere invalidato manualmente, tramite una chiamata ad API
 
@@ -54,21 +52,21 @@ Optional: un dossier può essere invalidato manualmente, tramite una chiamata ad
 - ciascun Theoretical Exam Pass permette l'iscrizione a massimo due Exam Appeal, nell'arco di sei mesi di validità;
 - per consentire l'inserimento di un Driving Slot (relativo a Driving Lessons o Practical Exams), è necessario un Provisional License valido;
 - ciascun Provisional License permette l'iscrizione a massimo tre Practical Exam, entro un anno di validità;
-- il Provisional license viene fornito dopo il successo del Theoretical exam;
+- il Provisional license viene fornito dopo il successo del Theoretical exam.
 
 ### Driving
 - ogni Driving Slot, in una fascia oraria è univocamente associato a un Dossier, un Instructor e un Vehicle;
 - ciascun Driving Slot può rappresentare un Practical Exam o una Driving Lesson;
 - ciascun Dossier può riservare un Driving slot alla volta;
-- per poter inserire un Driving Slot, è necessario verificare la validità della Provisional License
-- è possibile inserire un Driving Slot relativo a Practical Exam, solo in un Practical Exam Day;
+- per poter inserire un Driving Slot, è necessario verificare la validità della Provisional License;
+- è possibile inserire un Driving Slot relativo a Practical Exam, solo in un Practical Exam Day.
 
 
 ## Requisiti non funzionali
 I requisiti non funzionali riguardano le funzionalità che il sistema non deve necessariamente possedere per fare in modo che sia funzionante e corretto.
 
 I requisiti non funzionali che sono stati individuati sono i seguenti:
-- il software deve essere eseguibile sul sistema operativo Linux, e supportare  Java Runtime Environment versione 16, 17 e 18;
+- il software deve essere eseguibile sul sistema operativo Linux, e supportare  Java Runtime Environment versione 11, 16, 17 e 18;
 - il sistema deve essere integrabile con front-end esterni, utilizzando le API messe a disposizione;
 
 ## Requisiti implementativi
