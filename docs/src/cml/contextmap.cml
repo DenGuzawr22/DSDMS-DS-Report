@@ -42,7 +42,7 @@ BoundedContext ExamContext refines AbstractContext{
 
 
 BoundedContext DoctorContext refines AbstractContext{
-  domainVisionStatement = "consente la gestione di tutto ciò che concerne la visita, necessaria agli iscritti per poter coneguire l’esame teorico"
+  domainVisionStatement = "consente la gestione di tutto ciò che concerne la visita, necessaria agli iscritti per poter conseguire l’esame teorico"
   
   businessModel = "COMPLIANCE"
   evolution = CUSTOM_BUILT

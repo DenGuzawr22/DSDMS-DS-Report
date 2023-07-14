@@ -49,7 +49,7 @@ Per approfondire maggiormente la conoscenza del dominio, dei processi aziendali 
 
 Come strumento per la gestione e la rappresentazione grafica dei colloqui, si è deciso di utilizzare la strategia del Domain Storytelling, la quale prevede di lasciare raccontare agli esperti del dominio, come vengono svolte le differenti operazioni all'interno della Scuola Guida e cosa si vorrebbe ottenere come risultato, mentre i developers si occupano di catturare il racconto effettuato dall'esperto del dominio, tramite l'utilizzo del seguente linguaggio pittografico.
 
-Per favorire le successive fasi di razionalizzazione e progettazione, i termini inseriti corrispondono all'[Ubiquitous Language](UbiquitousLanguage.md) discusso con gli esperti del dominio.
+Per favorire le successive fasi di razionalizzazione e progettazione, i termini inseriti corrispondono all'[Ubiquitous Language](../Requisiti/UbiquitousLanguage.md) discusso con gli esperti del dominio.
 
 I risultati emersi da tali analisi, sono mostrati di seguito.
 

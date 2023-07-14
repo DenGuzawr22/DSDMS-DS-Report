@@ -5,7 +5,7 @@ nav_order: 4
 ---
 # Design
 ## Architettura generale
-Tenendo conto del requisito di implementazione che richiede di basare l'architettura del sistema su microservizi, sono stati definiti i seguenti elementi principali:
+Tenendo conto del requisito d'implementazione che richiede di basare l'architettura del sistema su microservizi, sono stati definiti i seguenti elementi principali:
 - Il client si connette a uno o più microservizi attraverso API REST.;
 - Alcuni microservizi comunicano tra loro tramite API REST;
 - Ogni microservizio dispone del proprio database MongoDB.

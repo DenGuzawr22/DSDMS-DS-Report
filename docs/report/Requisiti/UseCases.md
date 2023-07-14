@@ -19,7 +19,7 @@ Per favorire le successive fasi di razionalizzazione e progettazione, i termini 
 Il diagramma visualizzato in <a href="#fig1"> Figura 1 </a>, mostra il caso d'uso relativo alla gestione del Dossier. Un Dossier contiene tutte le informazioni di base (ad esempio nominativo, codice fiscale, numero ti fogli rosa) di un Iscritto.
 L'attore che svolge le operazioni è identificato come Segretario: tutte le operazioni visibili sono infatti svolte dopo esplicite richieste degli iscritti.
 
-In particolare la procedura di **Update Exam Status of Dossir** specifica aggiornamento sul completamento di esami pratici/teorici. In caso invalidazione di due fogli rossa dossier deve essere invalidato
+In particolare la procedura di **Update Exam Status of Dossier** specifica aggiornamento sul completamento di esami pratici/teorici. In caso invalidazione di due fogli rossa dossier deve essere invalidato
 
 <div align="center">
       <img id="fig2" src="img/use_driving.png" >
@@ -53,5 +53,5 @@ Anche in questo caso, la registrazione all'appello d'esame necessita di un contr
 L'ultimo diagramma presente, <a href="#fig4"> Figura 4 </a>, mette in risalto la gestione degli esami pratici, da parte del Segretario:
 - registra un nuovo foglio rossa
 - registra uno slot di guida, relativo a un esame pratico. L'*include* evidenzia alcune operazioni necessarie per l'esistenza di questo caso d'uso: verifica sul giorno d'esame, sulla validità del foglio rosa e sul minimo numero di guide effettuate necessarie
-- aggiorna il numero di tentativi dell'esame pratico referiti al foglio rosa dell'iscritto
+- aggiorna il numero di tentativi dell'esame pratico riferiti al foglio rosa dell'iscritto
 - seleziona il giorno d'esame tra quelli disponibili

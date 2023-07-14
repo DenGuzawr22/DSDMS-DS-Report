@@ -6,7 +6,7 @@ nav_order: 9
 
 # Esempi di utilizzo
 
-Il progetto sviluppato, si è posto l'obiettivo di sviluppare un sistema basato su Microservizi, che andasse a digitalizzare le funzionalità ed i processi messi in atto da una Scuola Guida.
+Il progetto sviluppato, si è posto l'obiettivo di sviluppare un sistema basato su Microservizi, che andasse a digitalizzare le funzionalità e i processi messi in atto da una Scuola Guida.
 L'obiettivo è stato quindi il solo sviluppo del back-end ti tale applicativo, in modo da fornire tutte le API necessarie allo sviluppo di un applicativo di front-end correlato.
 
 In particolare, gli ambiti che sono stati tenuti in considerazione, successivamente ad alcuni colloqui con il committente sono i seguenti:
@@ -30,7 +30,7 @@ val options: WebClientOptions = WebClientOptions()
 return WebClient.create(Vertx.vertx(), options)
 ```
 
-Avendo eseguito la connessione, possiamo procedere con l'utilizzo delle API messe a disposizione dal microservizio voluto, visualizzabili mediante [Documentazione OpenAPI](https://app.swaggerhub.com/apis/DenGuzawr22/DSDMS/latest) .
+Avendo eseguito la connessione, possiamo procedere con l'utilizzo delle API messe a disposizione dal microservizio voluto, visualizzabili mediante [Documentazione OpenAPI](https://app.swaggerhub.com/apis/DenGuzawr22/DSDMS/latest).
 
 L'obiettivo dell'esempio riportato è quello di registrare una guida pratica su strada, svolto come mostrato.
 
@@ -53,7 +53,7 @@ val request = client
     )
 ```
 
-L'invio delle informazioni avviene sempre mediante formati standard e riconoscibili visualizzati mediante schemi Json. Conseguentemente viene utilizzato un Buffer per effettuare l'encoding del modello Json necessario. Per ciascuna chiamata di tipo Post o Put, i rispettivi schemi Json, sono visibile all'interno di ciascun microservizio o nella documentazione OpenAPI.
+L'invio delle informazioni avviene sempre mediante formati standard e riconoscibili visualizzati mediante schemi Json. Conseguentemente viene utilizzato un Buffer per effettuare encoding del modello Json necessario. Per ciascuna chiamata di tipo Post o Put, i rispettivi schemi Json, sono visibile all'interno di ciascun microservizio o nella documentazione OpenAPI.
 
 Infine riceveremo una risposta positiva o negativa dal rispettivo microservizio, gestibile e visualizzabile mediante i seguenti comandi.
 Le tipologie di conferma o di errore ricevibili, sono anch'esse mostrate nella relativa documentazione OpenAPI, al link precedentemente inserito.
@@ -67,7 +67,7 @@ statusCode = response.statusCode()
 
 ## Registrazione di un nuovo Dossier
 
-Di seguito viene mostrata la procedura per la registrazione di un nuovo Dossier nel sistena.
+Di seguito viene mostrata la procedura per la registrazione di un nuovo Dossier nel sistema.
 
 Apertura della connessione al microservizio *Dossier Service*, istanziato sulla porta 8000 di Localhost.
 
@@ -93,8 +93,8 @@ val request = client
     )
 ```
 
-Attendiamo una rispsota dal server e gestiamo/visualizziamo il contenuto.
-Anche in questo caso, dalla documentazione OpenAPI è possibile esaminare le risposte ottnibili da parte del server.
+Attendiamo una risposta dal server e gestiamo/visualizziamo il contenuto.
+Anche in questo caso, dalla documentazione OpenAPI è possibile esaminare le risposte ottenibili da parte del server.
 
 ```Kotlin
 val response = waitResult(request)

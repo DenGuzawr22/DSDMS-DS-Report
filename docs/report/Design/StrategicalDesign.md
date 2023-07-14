@@ -19,7 +19,7 @@ I sotto domini sopra elencati, sono stati inoltre classificati come:
 - Core domain: rappresenta una o più funzioni primarie, all'interno del dominio principale
 - Supporting domain: raggruppa determinate funzioni necessarie ma non fondamentali per il dominio principale
 
-Avendo chiaro le informazioni di cui sopra, i sotto domini precedentemente individuati sono stati classificati come segue: Dossier di tipo Generic, Driving di tipo Core e Exam di tipo Support.
+Avendo chiaro le informazioni di cui sopra, i sotto domini precedentemente individuati sono stati classificati come segue: Dossier di tipo Generic, Driving di tipo Core ed Exam di tipo Support.
 
 ### Bounded context
 
@@ -88,7 +88,7 @@ Per ciascun contesto individuato, di seguito si propone una rappresentazione tes
 - Delete Practical Driving Lessons (Client → a command)
 - Read Practical Driving slots (Exam context, Client → a query)
 - Register a practical exam day (Client → a command)
-- Visualize pracrtical exam days (Client → a command)
+- Visualize practical exam days (Client → a command)
     
 **Outbound Communications**:
 - Check provisional license validity (Exam context → A query)
