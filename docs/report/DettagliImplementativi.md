@@ -66,7 +66,7 @@ Swagger è uno strumento open-source per la documentazione delle API in formato 
 Nel progetto è stato utilizzato per documentare tutte le API, che ciascun microservizio mette a disposizione, comprendendo ogni tipo di response code, payload e message, che viene possibile ricevere.
 Inoltre per favorire le procedure di test delle API in futuro, per il cliente e utenti finali, ogni rotta a disposizione è disponibile per il testing.
 
-Tutta la documentazione è stata inoltre pubblicata e resa pubblica presso SwaggerHub, disponibile e consultabile al seguente link: https://app.swaggerhub.com/apis/DenGuzawr22/DSDMS/latest.
+Tutta la documentazione è stata inoltre pubblicata e resa pubblica presso SwaggerHub, disponibile e consultabile al seguente [link](https://app.swaggerhub.com/apis/DenGuzawr22/DSDMS/latest)
 
 ## Cucumber
 
@@ -76,4 +76,4 @@ Tali test, sono focalizzati sull'utente finale del sistema e sui requisiti funzi
 
 L'utilizzo di questo Framework ha consentito l'inclusione del cliente nella definizione e implementazione delle procedure di testing, consentendo a entrambe le parti, team e cliente, di trarne vantaggio. Da un lato il cliente si rendeva conto del grado di complessità e di completezza del progetto (relativamente ai requisiti imposti), dall'altro il team ha potuto incrementare non poco la conoscenza sul dominio in esame, traendo spunto e informazione dal cliente.
 
-Per maggiori informazioni sull'utilizzo di questa tecnologia all'interno del progetto, consultare la sezione [Testing](Testing.md) 
+Per maggiori informazioni sull'utilizzo di questa tecnologia all'interno del progetto, consultare la sezione [Testing](Testing/Testing.md) 
