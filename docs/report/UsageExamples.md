@@ -6,7 +6,7 @@ nav_order: 9
 
 # Esempi di utilizzo
 
-Il progetto sviluppato, si è posto l'obiettivo di sviluppare un sistema basato su Microservizi, che andasse a supportare ed eventualmente migliorare le funzionalità fornite da una Scuola Guida.
+Il progetto sviluppato, si è posto l'obiettivo di sviluppare un sistema basato su Microservizi, che andasse a digitalizzare le funzionalità ed i processi messi in atto da una Scuola Guida.
 L'obiettivo è stato quindi il solo sviluppo del back-end ti tale applicativo, in modo da fornire tutte le API necessarie allo sviluppo di un applicativo di front-end correlato.
 
 In particolare, gli ambiti che sono stati tenuti in considerazione, successivamente ad alcuni colloqui con il committente sono i seguenti:

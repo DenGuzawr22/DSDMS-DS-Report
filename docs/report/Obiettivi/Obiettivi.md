@@ -5,16 +5,15 @@ nav_order: 2
 ---
 
 # Obiettivi del progetto
-La richiesta del committente ha dato l'inizio al processo di avvio del progetto. Durante questo processo, è stata organizzata una riunione di definizione degli obiettivi, in cui è stato utilizzato il metodo dell'***Impact Mapping*** per identificare gli attori principali coinvolti nel progetto e stabilire l'impatto che le *deliverables* del progetto devono avere, oltre ai *business value* attesi.
+Durante il processo avvio del progetto, è stata organizzata una riunione di definizione degli obiettivi, in cui è stato utilizzato il metodo dell'***Impact Mapping*** per identificare gli attori principali coinvolti nel progetto e stabilire l'impatto che i *deliverables* del progetto devono avere, oltre al *business value* atteso.
 
-Sono stato organizzato anche il processo di *Knowledge Crunching* che include le interviste con gli esperti del dominio.
+Inoltre, si è completata l'organizzazione del processo di [Knowledge Crunching](/docs/report/Obiettivi/KnowledgeCrunching.md) che include le interviste con gli esperti del dominio, utili e necessarie per comprende a fondo le necessità del committente e le motivazioni per le quali il progetto è stato voluto.
 
 ##  Richiesta committente
 
-"Sono il proprietario di due scuola guida. Dato l'avanzare dei tempi, richiedo un software di back-end che possa gestire i bisogni del settore nel quale opero.
-In particolare, ho già proceduto a richiedere la realizzazione del front-end.
+"Sono il proprietario di due scuola guida. Dato l'avanzare dei tempi, richiedo un software di back-end che possa gestire i bisogni del settore nel quale opero. In particolare, ho già proceduto a richiedere la realizzazione del front-end.
 
-Vi sono alcune complessità che il dominio di mia competenza, porta con se, riguardanti la gestione delle guide, degli esami e di tutto ciò che concerne gli iscritti, che frequentano le scuola guida.
+Vi sono alcune complessità che il dominio di mia competenza porta con se, riguardanti la gestione delle guide, degli esami e di tutto ciò che concerne gli iscritti, che frequentano le scuola guida.
 Lo scopo sarebbe quello di ottenere un software che possa consentire l'utilizzo distribuito nello spazio di determinate funzioni, un esempio fra tutti: uno dei requisiti sarebbe la prenotazione delle guide mediante ambiente esterno agli uffici.
 
 Allo stato attuale, ogni processo è svolto in modo cartaceo o ultimamente con l'utilizzo di applicativi offline, che non ne consentono l'utilizzo efficace ed efficiente, anche in mobilità.
@@ -51,8 +50,8 @@ L'ultimo livello individua il *business value* atteso dal raggiungimento degli o
 
 ### Goal
 Ricapitolando i goal individuati sono:
-- **Migliorare la gestione di prenotazione delle guide**. Effetti attesi sono: riduzione degli errori, aumento della velocità e precisione.
-- **Migliorare la gestione del parco veicoli**: Rimozione della comunicazione diretta per individuare i veicoli disponibili, prevenzione dei casi quando lo stesso veicolo è stato richiesto due volte per la stessa data e ora.
+- **Migliorare la gestione di prenotazione delle guide**. Conseguente riduzione degli errori, aumento della velocità e precisione.
+- **Migliorare la gestione del parco veicoli**: Rimozione della comunicazione diretta per individuare i veicoli disponibili, prevenzione dei casi in cui lo stesso veicolo è stato richiesto due volte per la stessa data e ora.
 - **Verifica automatica dei vincoli di business**: Riduzione del tempo richiesto per le verifiche manuali, riduzione degli errori.
 
 ### Obiettivi
@@ -66,7 +65,7 @@ Gli obbiettivi del progetto sono:
 
 
 ## Self-assessment policy
-Al fine di garantire il rispetto dei requisiti e il corretto funzionamento delle API fornite dai microservizi, è stato deciso adottate le seguenti misure di quality assurance:
-- Gli scenari d'uso descritti dal committente saranno integrate direttamente nel processo di testing attraverso l'utilizzo dell'approccio "Acceptance-Testing Driven Development".
+Al fine di garantire il rispetto dei requisiti e il corretto funzionamento delle API fornite dai microservizi, si è deciso di adottare le seguenti misure di quality assurance:
+- Gli scenari d'uso descritti dal committente saranno integrati direttamente nel processo di testing attraverso l'utilizzo dell'approccio "Acceptance-Testing Driven Development".
 - Saranno implementati processi di Continuous Integration per assicurare che il software venga testato in modo completo negli ambienti di esecuzione "puliti".
 - Sarà effettuata una verifica automatica della qualità del codice mediante l'utilizzo di plugin esterni.

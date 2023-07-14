@@ -10,7 +10,7 @@ Per verificare il corretto funzionamento del sistema e l'efficienza dei servizi 
 si è proceduto a testare le diverse componenti del sistema, mediante Acceptance Testing Driven Development.
 Il testing avviene su due fronti:
 - test locali, all'interno di ciascun microservice;
-- black-box test (a scatola chiusa), che rappresentano una porzione per la verifica del progetto.
+- black-box test (a scatola chiusa), con cui viene verificato il progetto, mediante il client SystemTester.
   
 Nelle successive sezioni verranno descritti in maggiore dettaglio i test realizzati e le motivazioni che vanno a supportare le scelte implementative effettuate.
 

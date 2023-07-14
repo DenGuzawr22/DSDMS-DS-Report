@@ -5,17 +5,16 @@ nav_order: 4
 ---
 # Design
 ## Architettura generale
-Tenendo conto del requisito di implementazione che richiede di basare l'architettura del sistema su microservizi, sono stati definiti i seguenti elementi principali dell'architettura:
-- Il client si connette a uno o più microservizi attraverso le API REST.;
-- Alcuni microservizi comunicano tra loro tramite le API REST;
-- Ogni microservizio dispone del proprio database.
-
+Tenendo conto del requisito di implementazione che richiede di basare l'architettura del sistema su microservizi, sono stati definiti i seguenti elementi principali:
+- Il client si connette a uno o più microservizi attraverso API REST.;
+- Alcuni microservizi comunicano tra loro tramite API REST;
+- Ogni microservizio dispone del proprio database MongoDB.
 
 ![Alt text](<img/componentsDiagram.png>)
 
-<p align="center">[Fig 1] Diagramma del deployment che mostra una astrazione di architettura del sistema</p>
+<p align="center">[Fig 1] Diagramma astratto relativo all'architettura del sistema in esame</p>
 
-Durante la fase di Strategical Design, sono stati definiti 4 bounded context che verranno mappati su 4 microservizi: DoctorService, DossierService, ExamService e DrivingService. È stato deciso che ognuno di essi avrà il proprio database MongoDB
+Durante la fase di Strategical Design, sono stati definiti quattro bounded context che verranno mappati su quattro microservizi: DoctorService, DossierService, ExamService e DrivingService. Ognuno di essi ha a disposizione il proprio database MongoDB.
 
 Il componente di testing chiamato SystemTester è responsabile di simulare un client al fine di verificare il corretto funzionamento del sistema. Le comunicazioni tra i microservizi sono rappresentate nella  <a href="#deploymentImpl">[Fig 2]</a>
 
